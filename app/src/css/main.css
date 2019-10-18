@@ -1,0 +1,199 @@
+body{
+margin: 0;
+padding: 0;
+font-family:'Germania One', cursive, 'avenir', sans-sans-serif;
+text-transform: uppercase;
+}
+
+html{
+scroll-behavior: smooth;
+}
+
+h1{
+font-weight: 100;
+text-align: center;
+font-size: 30px;
+margin-top: 10%;
+}
+
+h2{
+  text-align: center;
+  padding-top: 20vh;
+  cursor: default;
+  border-bottom: 1px solid #000;
+  max-width: 70%;
+  padding-bottom: 20px;
+  font-weight: 100;
+  margin: auto;
+}
+
+.smol{
+font-size: 10px;
+padding: 0;
+margin: 4px;
+}
+
+
+
+p span{
+font-weight: 600;
+font-size: 15px;
+color: #c947cc;
+}
+
+
+
+
+
+@keyframes up {
+  0% {
+    opacity: 0;
+  }
+
+  10%, 90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+}
+
+.hidden{
+display: none;
+}
+
+.red{
+  background-color: red;
+}
+
+.splitscreen{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+}
+
+.picker:hover{
+  cursor: pointer;
+}
+.picker:focus,
+.picker:active{
+  outline: none;
+}
+.picker{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50%;
+  position: relative;
+  font-size: 30px;
+  border: none;
+  font-weight: 800;
+  color: #fff;
+  font-family: 'Germania one';
+}
+.meat-boy{
+  background-image: url('https://vignette.wikia.nocookie.net/runescape2/images/9/99/Raw_ugthanki_meat_detail.png/revision/latest?cb=20140730230507');
+  background-color: #a22f2f;
+}
+
+.vegan-boy{
+  background-image: url('https://runescape.wiki/images/9/96/Cabbage_detail.png?611ee');
+  background-color: #2f43a2;
+}
+
+
+.vegan-counter,
+.meat-counter{
+  position: absolute;
+  top: 0;
+  font-size: 40px;
+  padding: 10px 22px 10px 22px;
+  background-color: #fce181;
+  color: #000;
+  left: 50%;
+  top: 10%;
+  z-index: 3;
+}
+
+.half{
+  display: flex;
+  position: relative;
+}
+
+.controls{
+  margin-top: auto;
+  height: 30vh;
+  display: flex;
+  align-items: start;
+  width: 100%;
+  border-top-right-radius: 70%;
+  border-top-left-radius: 20%;
+  background: linear-gradient(#fff, #c333c7);
+}
+
+
+.vegan-half .controls{
+  background: linear-gradient(#fff, #9198e5);
+  border-top-left-radius: 70%;
+  border-top-right-radius: 20%;
+}
+
+.plus{
+  height: 3em;
+  width: 3em;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  background-color: #332349;
+  color: #fff;
+  font-weight: 800;
+}
+
+.meat-plus{
+  margin-left: auto;
+  margin-right: 3em;
+}
+.vegan-plus{
+  margin-left: 3em;
+  margin-right: auto;
+}
+
+.min{
+  width: 2em;
+  height: 2em;
+  background-color: #4da6fa;
+  color: #fff;
+  border: none;
+  font-size: 20px;
+  border-radius: 50%;
+  margin-top: 7%;
+  font-weight: 800;
+}
+
+.meat-min{
+  margin-left: 50%;
+}
+.vegan-min{
+  margin-right: 50%;
+}
+
+img{
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  transform: rotate(4deg);
+}
+
+.meat-burger{
+  transform: rotate(4deg)
+}
+.vegan-burger{
+  transform: rotate(-4deg)
+}
+
+/* #332349
+#c333c7
+#5475fb
+#707efd
+#707efd */
