@@ -183,6 +183,8 @@ img{
   top: 20%;
   left: 30%;
   transform: rotate(4deg);
+  max-width: 300px;
+  
 }
 
 .meat-burger{

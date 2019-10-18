@@ -49,8 +49,11 @@ socket.on('add', function(data){
     }
   })
 
-// socket.on('deleter', function(ids){
-//     io.emit('deleter', ids);
+// socket.on('reset', function(){
+//   console.log("someone tried to reset")
+//   meatBurger = 0;
+//   veganBurger = 0;
+//   io.emit('reset');
 //   })
 // socket.on('shunner', function(xoUser){
 //     userList.push(xoUser)

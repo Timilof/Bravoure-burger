@@ -11,10 +11,22 @@ document.querySelector('.send').addEventListener("click", function(){
   if (userName == '' || userName == null || userName === " " || userName === "  " || userName === "   " || userName === "    ") {
     namefield.value = "";
     namefield.focus();
+  }else if(userName == "jochem" || userName == "lothar" || userName == "Lothar" || userName == "robin"){
+    userName = "Bravoure_Interns_Group™"
+    modal.classList.add("hidden")
   }else{
     modal.classList.add("hidden")
   }
 })
+
+
+
+// socket.on("reset", function(){
+//   console.log("someone tried to reset")
+//   document.querySelectorAll('.name-holder').innerHtml = "";
+//   document.querySelector('.meat-counter').textContent = "0";
+//   document.querySelector('.vegan-counter').textContent = "0";
+// });
 
 socket.on("joined", function(data){
   console.log(data)
