@@ -5,18 +5,29 @@ import { db } from "../firebase";
 const Controls = styled.div`
   position: relative;
   margin-top: auto;
-  height: 23vh;
+  height: 13vh;
   display: flex;
   align-items: start;
   width: 100%;
-  border-top-right-radius: ${props => (props.type === "meat" ? "20%" : "70%")};
-  border-top-left-radius: ${props => (props.type === "meat" ? "70%" : "20%")};
+  border-top-left-radius: 20%;
+  border-top-right-radius: 20%;
+  align-items: center;
+  justify-content: space-around;
   background: ${props =>
     props.type === "meat"
       ? "linear-gradient(#5d16df, #c333c7)"
       : "linear-gradient(#5d16df, #9198e5)"};
-  flex-direction: ${props =>
-    props.type === "meat" ? "row-reverse" : "initial"};
+
+  @media (min-width: 1024px) {
+    flex-direction: ${props =>
+      props.type === "meat" ? "row-reverse" : "initial"};
+    align-items: initial;
+    justify-content: initial;
+    height: 23vh;
+    border-top-right-radius: ${props =>
+      props.type === "meat" ? "20%" : "70%"};
+    border-top-left-radius: ${props => (props.type === "meat" ? "70%" : "20%")};
+  }
 `;
 
 const Plus = styled.button`
@@ -24,13 +35,14 @@ const Plus = styled.button`
   width: 3em;
   border-radius: 50%;
   border: none;
-  font-size: 30px;
+  font-size: 20px;
   /* background-color: #332349; */
+  margin-left: initial;
+  margin-right: initial;
   background-color: #3add9d;
   color: #fff;
   font-weight: 800;
-  margin-left: ${props => (props.type === "meat" ? "auto" : "3em")};
-  margin-right: ${props => (props.type === "meat" ? "3em" : "auto")};
+
   &:focus {
     outline: none;
   }
@@ -42,19 +54,28 @@ const Plus = styled.button`
     transform: scale(1.03);
     transition: ease-in-out 0.2s;
   }
+  @media (min-width: 1024px) {
+    font-size: 30px;
+    margin-left: ${props => (props.type === "meat" ? "auto" : "3em")};
+    margin-right: ${props => (props.type === "meat" ? "3em" : "auto")};
+  }
 `;
 
 const ReallyBigNumber = styled.h2`
   width: 100%;
   position: absolute;
   text-align: center;
-  font-size: 40em;
+  font-size: 10em;
+  bottom: 50px;
   line-height: 0;
-  bottom: 71px;
   color: #9226d22b;
   -webkit-text-stroke: 2px #3add9d;
   pointer-events: none;
   z-index: -1;
+  @media (min-width: 1024px) {
+    font-size: 70vh;
+    bottom: 71px;
+  }
 `;
 const Min = styled.button`
   width: 2em;
@@ -65,9 +86,9 @@ const Min = styled.button`
   border: none;
   font-size: 20px;
   border-radius: 50%;
+  margin: 0;
   margin-top: 7%;
   font-weight: 800;
-  margin: ${({ type }) => (type === "meat" ? "0 0 0 50%" : "0 50% 0 0")};
   &:focus {
     outline: none;
   }
@@ -78,6 +99,9 @@ const Min = styled.button`
     cursor: pointer;
     transform: scale(1.03);
     transition: ease-in-out 0.2s;
+  }
+  @media (min-width: 1024px) {
+    margin: ${({ type }) => (type === "meat" ? "0 0 0 50%" : "0 50% 0 0")};
   }
 `;
 

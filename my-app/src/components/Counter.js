@@ -4,15 +4,23 @@ import styled from "styled-components";
 
 const Count = styled.span`
   position: absolute;
-  top: 0;
-  font-size: 40px;
-  padding: 10px 22px 10px 22px;
   background-color: #fed32d;
-  border-radius: 20px;
   color: #000;
-  left: 50%;
-  top: 10%;
   z-index: 3;
+  font-size: 20px;
+  padding: 1px 12px 1px 12px;
+  background-color: #fed32d;
+  border-radius: 10px;
+  left: 45%;
+  top: 20%;
+
+  @media (min-width: 1024px) {
+    font-size: 40px;
+    left: 50%;
+    top: 10%;
+    border-radius: 20px;
+    padding: 10px 22px 10px 22px;
+  }
 `;
 
 const documet = db.collection("users");

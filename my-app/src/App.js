@@ -93,7 +93,7 @@ document.body.addEventListener("keydown", e => {
 });
 
 function App() {
-  const [name, setName] = useState("Intern");
+  const [name, setName] = useState(null);
   const [names, setNames] = useState([]);
   const [meatCount, setMeat] = useState(0);
   const [veganCount, setVegan] = useState(0);

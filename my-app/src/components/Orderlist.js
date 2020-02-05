@@ -9,12 +9,12 @@ const FolderButton = styled.button`
   border: none;
   text-align: right;
   position: absolute;
-  top: 20px;
-  left: 44%;
+  top: 48%;
+  left: 35%;
   font-size: 23px;
   font-weight: 600;
   line-height: 0px;
-  width: 200px;
+  width: 110px;
   height: 26px;
   border-radius: 6px;
   z-index: 69;
@@ -41,6 +41,11 @@ const FolderButton = styled.button`
     left: 0;
     font-size: 20px;
   }
+  @media (min-width: 1024px) {
+    top: 20px;
+    left: 44%;
+    width: 200px;
+  }
 `;
 const MeatBoy = styled.span`
   background-color: #ee4a4b;
@@ -48,6 +53,7 @@ const MeatBoy = styled.span`
   border-radius: 6px;
   padding: 0px 2px 0 2px;
   color: #fff;
+  line-height: initial;
 `;
 const VeganBoy = styled.span`
   background-color: #38db9b;
@@ -55,23 +61,28 @@ const VeganBoy = styled.span`
   border-radius: 6px;
   padding: 0px 2px 0 2px;
   color: #fff;
+  line-height: initial;
 `;
 const ListItem = styled.p`
   align-items: center;
   text-overflow: ellipsis;
   font-weight: 500;
   margin: 0;
-  padding: 3px 0 3px 8px;
+  padding: 3px 2px 3px 8px;
+  line-height: 3;
   border-bottom: 1px solid #eee;
   display: flex;
   flex-direction: row;
+  @media (min-width: 1024px) {
+    padding: 3px 2px 3px 8px;
+  }
 `;
 const Folder = styled(animated.div)`
-  position: absolute;
-  width: 200px;
+  position: initial;
+  width: 100%;
   height: 0px;
   background-color: #ffecf2;
-  border-radius: 6px;
+  border-radius: 0;
   border: none;
   padding-top: 10px;
   top: 36px;
@@ -94,6 +105,11 @@ const Folder = styled(animated.div)`
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     background-color: #f5f5f5;
+  }
+  @media (min-width: 1024px) {
+    position: absolute;
+    width: 200px;
+    border-radius: 8px;
   }
 `;
 
@@ -139,9 +155,9 @@ const Orderlist = ({ mCount, vCount }) => {
       <FolderButton onClick={() => setToggle(!isToggled)}></FolderButton>
       <Folder style={roll}>
         {userArray.map(user => {
-          if (user.meat >= 0 || user.vegan >= 0) {
-            console.log(userArray);
-            console.log(userArray[userArray.length - 1]);
+          if (user.meat > 0 || user.vegan > 0) {
+            // console.log(userArray);
+            // console.log(userArray[userArray.length - 1]);
             return (
               <ListItem>
                 {user.name}

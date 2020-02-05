@@ -8,13 +8,17 @@ import VeganImage from "../img/vegan_burger.png";
 const Halfling = styled.div`
   display: flex;
   position: relative;
-  max-height: 100vh;
+  max-height: 50vh;
+  height: 50vh;
   overflow: hidden;
-  height: 100vh;
   background-image: url(https://huntpng.com/images250/white-grid-png-13.png);
   position: relative;
   background-size: contain;
   background-repeat: no-repeat;
+  @media (min-width: 1024px) {
+    height: 100vh;
+    max-height: 100vh;
+  }
 `;
 
 const ImageHolder = styled.div`
@@ -23,13 +27,22 @@ const ImageHolder = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 18%;
+  top: 38%;
+  @media (min-width: 1024px) {
+    top: 18%;
+  }
 `;
 const Burger = styled.img`
   /* position: absolute;
   top: 20%;
   left: 30%; */
-  max-width: 300px;
+  max-width: 130px;
+  z-index: 9;
+  pointer-events: none;
+  @media (min-width: 1024px) {
+    max-width: 18vw;
+    width: 100%;
+  }
 `;
 
 const Half = props => {

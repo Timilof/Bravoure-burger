@@ -9,8 +9,8 @@ const Smol = styled.span`
 const BigAssName = styled.h2`
   position: absolute;
   left: 0;
-  bottom: 25%;
-  font-size: 40px;
+  bottom: 0;
+  font-size: 20px;
   width: 100%;
   color: transparent;
   -webkit-text-stroke: 1px #3add9d;
@@ -19,7 +19,11 @@ const BigAssName = styled.h2`
   text-align: center;
   text-transform: uppercase;
   word-break: break-all;
+  pointer-events: none;
   padding: 0 20px;
+  margin: 0;
+  height: 20vh;
+  top: 0;
   &::before {
     content: "";
     pointer-events: none;
@@ -29,6 +33,17 @@ const BigAssName = styled.h2`
     height: 40vh;
     background-color: #fae;
     bottom: 81px;
+    transform: rotate(90deg);
+  }
+  @media (min-width: 1024px) {
+    top: initial;
+    &::before {
+      bottom: 30vh;
+      transform: rotate(0deg);
+    }
+    bottom: 10%;
+    font-size: 40px;
+    margin: initial;
   }
 `;
 

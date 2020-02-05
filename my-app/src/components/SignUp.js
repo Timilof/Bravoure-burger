@@ -15,14 +15,21 @@ const StyledInput = styled.input`
   border: none;
   font-weight: 600;
   outline: none;
-  width: 25vw;
+  width: 100%;
+  @media (min-width: 1024px) {
+    width: 25vw;
+  }
 `;
 const Styledcontainer = styled.div`
   margin: auto;
   display: flex;
   margin-top: 20vh;
   flex-direction: column;
-  max-width: 30vw;
+  max-width: 100vw;
+  padding: 0 5vw;
+  @media (min-width: 1024px) {
+    max-width: 30vw;
+  }
 `;
 const StyledHead = styled.h1`
   color: #ebe8f9;
@@ -31,12 +38,17 @@ const StyledHead = styled.h1`
 const StyledLink = styled(Link)`
   background-color: #fed32d;
   padding: 15px;
-  width: 6em;
+  width: 100%;
+  text-align: center;
   text-decoration: none;
   color: #000;
   border-radius: 8px;
   font-weight: 700;
   letter-spacing: 2px;
+  @media (min-width: 1024px) {
+    text-align: left;
+    width: 6em;
+  }
 `;
 
 // function getRealtimeUpdates() {
